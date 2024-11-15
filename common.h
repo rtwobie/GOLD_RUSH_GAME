@@ -56,6 +56,11 @@ void render_row(t_game *game, int y);
 void render_map(t_game *game);
 int load_game_assets(t_game *game);
 
+//init.c
+void	init_sdl(void);
+void	init_game(t_game *game);
+int		init_map(t_game *game, char *map_filename);
+
 //main.c
 void render_map(t_game *game);
 char	*read_join(int fd, char	*saved);
@@ -67,9 +72,6 @@ int     ft_validate_map(char **map, int max_y, int max_x);
 int     ft_check_walls(char **map, int max_y, int max_x);
 void    ft_flood_fill(char **map, int y, int max_y, int x, int max_x, int *found_exit);
 void ft_gold_drain(t_game *game);
-void init_game(t_game *game);
-int init_window_and_map(t_game *game, char *map_filename);
-int create_window(t_game *game);
 void find_positions(t_game *game);
 void count_coins(t_game *game);
 int start_game(t_game *game);
