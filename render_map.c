@@ -12,20 +12,25 @@
 
 #include "so_long.h"
 
+t_surfaces	load_surface(void)
+{
+	t_surfaces surfaces;
+
+	surfaces.wall = SDL_LoadBMP("assets/sprites/kaktus04.xpm");
+	surfaces.player = SDL_LoadBMP("assets/sprites/cowboy_knife00.xpm");
+	surfaces.floor = SDL_LoadBMP("assets/sprites/floor00.xpm");
+	surfaces.exit = SDL_LoadBMP("assets/sprites/chest02.xpm");
+	surfaces.coin = SDL_LoadBMP("assets/sprites/coin02.xpm");
+	surfaces.enemy_y = SDL_LoadBMP("assets/sprites/cowboy_Y00.xpm");
+	surfaces.enemy_x = SDL_LoadBMP("assets/sprites/cowboy_X00.xpm");
+
+	// * add surface errorhandling here * //
+
+	return (surfaces);
+}
 
 t_textures load_textures(void)
 {
-	t_textures textures;
-
-	textures.wall = SDL_LoadBMP("kaktus04.xpm");
-	textures.player = SDL_LoadBMP("cowboy_knife00.xpm");
-	textures.floor = SDL_LoadBMP("floor00.xpm");
-	textures.exit = SDL_LoadBMP("chest02.xpm");
-	textures.coin = SDL_LoadBMP("coin02.xpm");
-	textures.enemy_y = SDL_LoadBMP("cowboy_Y00.xpm");
-	textures.enemy_x = SDL_LoadBMP("cowboy_X00.xpm");
-
-	return (textures);
 }
 
 void render_cell(t_game *game, int x, int y)
