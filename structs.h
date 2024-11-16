@@ -9,7 +9,7 @@ typedef struct s_app {
 	SDL_Renderer	*renderer;
 } t_app;
 
-typedef struct s_textures {
+typedef struct s_surfaces {
 	SDL_Surface *wall;
 	SDL_Surface *player;
 	SDL_Surface *floor;
@@ -19,6 +19,18 @@ typedef struct s_textures {
 	SDL_Surface *enemy_x;
 	SDL_Surface *enemy_v;
 	SDL_Surface *enemy_h;
+} t_surfaces;
+
+typedef struct s_textures {
+	SDL_Texture *wall;
+	SDL_Texture *player;
+	SDL_Texture *floor;
+	SDL_Texture *exit;
+	SDL_Texture *coin;
+	SDL_Texture *enemy_y;
+	SDL_Texture *enemy_x;
+	SDL_Texture *enemy_v;
+	SDL_Texture *enemy_h;
 } t_textures;
 
 typedef struct s_score {
