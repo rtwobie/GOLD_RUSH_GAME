@@ -50,6 +50,7 @@ void	init_game(t_game *game);
 int		init_map(t_game *game, char *map_filename);
 
 //main.c
+void	cleanup(void);
 void render_map(t_game *game);
 char	*read_join(int fd, char	*saved);
 char	*savedtilnl(char *saved, char c);
