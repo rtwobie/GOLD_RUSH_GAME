@@ -10,15 +10,15 @@ typedef struct s_app {
 } t_app;
 
 typedef struct s_textures {
-	void *wall;
-	void *player;
-	void *floor;
-	void *exit;
-	void *coin;
-	void *enemy_y;
-	void *enemy_x;
-	void *enemy_v;
-	void *enemy_h;
+	SDL_Surface *wall;
+	SDL_Surface *player;
+	SDL_Surface *floor;
+	SDL_Surface *exit;
+	SDL_Surface *coin;
+	SDL_Surface *enemy_y;
+	SDL_Surface *enemy_x;
+	SDL_Surface *enemy_v;
+	SDL_Surface *enemy_h;
 } t_textures;
 
 typedef struct s_score {
