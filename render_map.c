@@ -13,18 +13,17 @@
 #include "so_long.h"
 
 
-t_textures load_textures(void *mlx)
+t_textures load_textures(void)
 {
 	t_textures textures;
-	int img_width, img_height;
 
-	textures.wall = mlx_xpm_file_to_image(mlx, "kaktus04.xpm", &img_width, &img_height);
-	textures.player = mlx_xpm_file_to_image(mlx, "cowboy_knife00.xpm", &img_width, &img_height);
-	textures.floor = mlx_xpm_file_to_image(mlx, "floor00.xpm", &img_width, &img_height);
-	textures.exit = mlx_xpm_file_to_image(mlx, "chest02.xpm", &img_width, &img_height);
-	textures.coin = mlx_xpm_file_to_image(mlx, "coin02.xpm", &img_width, &img_height);
-	textures.enemy_y = mlx_xpm_file_to_image(mlx, "cowboy_Y00.xpm", &img_width, &img_height);
-	textures.enemy_x = mlx_xpm_file_to_image(mlx, "cowboy_X00.xpm", &img_width, &img_height);
+	textures.wall = SDL_LoadBMP("kaktus04.xpm");
+	textures.player = SDL_LoadBMP("cowboy_knife00.xpm");
+	textures.floor = SDL_LoadBMP("floor00.xpm");
+	textures.exit = SDL_LoadBMP("chest02.xpm");
+	textures.coin = SDL_LoadBMP("coin02.xpm");
+	textures.enemy_y = SDL_LoadBMP("cowboy_Y00.xpm");
+	textures.enemy_x = SDL_LoadBMP("cowboy_X00.xpm");
 
 	return (textures);
 }
